@@ -1,7 +1,9 @@
 '''
-4. Write a Python program to extract the text in the first paragraph tag of a given html document.
+5. Write a Python program to find the length of the
+text of the first <h2> tag of a given html document.
 
 '''
+
 
 from bs4 import BeautifulSoup
 
@@ -35,6 +37,6 @@ w3resource.com</a></p>
 
 soup = BeautifulSoup(html_doc,"html.parser")
 
-result = soup.find("p").text
+result = soup.find_all("h2")[0].text
 
-print(result)
+print(len(result))
