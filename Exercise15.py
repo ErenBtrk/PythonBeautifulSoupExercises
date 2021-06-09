@@ -8,8 +8,6 @@ from bs4 import BeautifulSoup
 url = 'https://www.python.org/'
 reqs = requests.get(url).text
 soup = BeautifulSoup(reqs, 'html.parser')
-print("\nNames of all HTML tags (https://www.python.org):\n")
-
 
 for tag in soup.html.descendants:
     if(tag.name != None):
